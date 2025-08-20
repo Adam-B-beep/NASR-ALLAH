@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Adam 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 800% 800%;
+      animation: gradientBG 20s ease infinite;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      z-index: 2;
+    }
+
+    .card h1 {
+      font-size: 3.5em;
+      margin: 0;
+      color: #ff4081;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.25);
+    }
+
+    .card p {
+      font-size: 1.3em;
+      color: #333;
+      margin-top: 15px;
+      font-style: italic;
+    }
+
+    .snippet {
+      position: absolute;
+      font-size: 2em;
+      font-weight: bold;
+      color: rgba(255,255,255,0.5);
+      pointer-events: none;
+      white-space: nowrap;
+      animation: float 12s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh) rotate(0deg); }
+      to { transform: translateY(-120vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Happy 18th Birthday, HILMIIIIII! 🎂</h1>
+    <p>RAK MN AFDAL ASDI9A2I, RBI YKHLIK DIMA FR7AN</p>
+  </div>
+
+  <script>
+    const snippets = ["#include <stdio.h>", "printf('%d\n', 42);", "int main(void)", "int myNum = 5;", "for (i = 0; i < 5; i++)", "  return 0;"];
+
+    for (let i = 0; i < 25; i++) {
+      const span = document.createElement("span");
+      span.className = "snippet";
+      span.innerText = snippets[Math.floor(Math.random() * snippets.length)];
+      span.style.left = Math.random() * 100 + "vw";
+      span.style.animationDuration = 8 + Math.random() * 10 + "s";
+      span.style.fontSize = 1 + Math.random() * 2.5 + "em";
+      span.style.opacity = 0.6 + Math.random() * 0.3; // increased opacity
+      document.body.appendChild(span);
+    }
+  </script>
+</body>
+</html>
